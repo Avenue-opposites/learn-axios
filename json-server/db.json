@@ -1,0 +1,44 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "我即是道"
+    },
+    {
+      "id": 2,
+      "title": "阴阳师斗技",
+      "author": "我即是道"
+    },
+    {
+      "title": "御魂的专业强化方法",
+      "author": "徐小侠",
+      "id": 3
+    },
+    {
+      "title": "英灵的正确强化方法",
+      "author": "丸子",
+      "id": 4
+    },
+    {
+      "title": "终于学完axios啦",
+      "author": "我即是道",
+      "id": 11
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "我正在学习axios",
+      "postId": 1
+    },
+    {
+      "id": 2,
+      "body": "666",
+      "postId": 2
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

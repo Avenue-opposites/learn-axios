@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>axios取消请求</title>
+    <style>
+        h1 {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 5em;
+            border-bottom: 1px solid #000;
+            padding: 10px;
+            margin: 5px;
+            text-shadow: 2px 0 5px rgb(221, 43, 43);
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+        .get,.cancel {
+            color: #fff;
+            height: 40px;
+            border-radius: 5px;
+            margin-left: 10px;
+            padding: 10px;
+            box-shadow: 1px 0 3px 0 #000;
+            width: 80px;
+            transition: all .3s;
+        }
+        .get {
+            background-color: rgb(224, 114, 114);
+        }
+        .get:hover {
+            width: 100px;
+            background-color: rgb(250, 0, 0);
+        }
+        .cancel {
+            background-color: rgb(59, 195, 219);
+        }
+        .cancel:hover {
+            width: 100px;
+            background-color: rgb(0, 238, 255);
+        }
+    </style>
+    <script src="./dist/axios取消请求.bundle.js"></script>
+</head>
+<body>
+    <h1>使用axios取消AJAX请求</h1>
+    <div class="container">
+        <button class="get">发送请求</button>
+        <button class="cancel">取消请求</button>
+    </div>
+    <p>
+        id:<input type="number" id="number">
+    </p>
+</body>
+</html>

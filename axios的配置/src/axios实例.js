@@ -1,0 +1,71 @@
+window.onload = function () {
+  //引入axios
+  const axios = require("axios").default;
+  const title = document.getElementById("title");
+  const author = document.getElementById("author");
+  const id = document.getElementById("number");
+  const request = axios.create({
+    timeout: 3000,
+    baseURL: "http://localhost:3000",
+  });
+  //创建点击事件
+  document.querySelector(".get").onclick = () => {
+    request.get(`/posts/${id.value}`).then((response) => {
+      console.log(response);
+    });
+  };
+  document.querySelector(".post").onclick = () => {
+    request
+      .post(`/posts`, {
+        title: title.value,
+        author: author.value,
+      })
+      .then((response) => {
+        console.log(response);
+      });
+  };
+  document.querySelector(".put").onclick = () => {
+    request
+      .put(`/posts/${id.value}`, {
+        title: title.value,
+        author: author.value,
+      })
+      .then((response) => {
+        console.log(response);
+      });
+  };
+  document.querySelector(".delete").onclick = () => {
+    request.delete(`/posts/${id.value}`).then((response) => {
+      console.log(response);
+    });
+  };
+  // 添加请求拦截器
+  request.interceptors.request.use(
+    function (config) {
+      // 在发送请求之前做些什么
+      console.log("Request Interceptors Success");
+      return config;
+    },
+    function (error) {
+      // 对请求错误做些什么
+      console.log("Request Interceptors Failure");
+      return Promise.reject(error);
+    }
+  );
+
+  // 添加响应拦截器
+  request.interceptors.response.use(
+    function (response) {
+      // 2xx 范围内的状态码都会触发该函数。
+      // 对响应数据做点什么
+      console.log("Response Interceptors Success");
+      return response;
+    },
+    function (error) {
+      // 超出 2xx 范围的状态码都会触发该函数。
+      // 对响应错误做点什么
+      console.log("Response Interceptors Failure");
+      return Promise.reject(error);
+    }
+  );
+};

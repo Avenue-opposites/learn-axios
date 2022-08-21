@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "build1":"browserify ./axios的配置/src/axios尝试.js -o ./axios的配置/dist/axios尝试.bundle.js",
+    "build2":"browserify ./axios的配置/src/axios实例.js -o ./axios的配置/dist/axios实例.bundle.js",
+    "build3":"browserify ./axios的配置/src/axios取消请求.js -o ./axios的配置/dist/axios取消请求.bundle.js"
+  },
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}

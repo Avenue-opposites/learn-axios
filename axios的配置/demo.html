@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>axios初使用</title>
+    <style>
+        h1 {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 5em;
+            border-bottom: 1px solid #000;
+            padding: 10px;
+            margin: 5px;
+            text-shadow: 2px 0 5px rgb(221, 43, 43);
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+        .get,.post,.put,.delete {
+            height: 40px;
+            border-radius: 5px;
+            margin-left: 10px;
+            padding: 10px;
+            box-shadow: 1px 0 3px 0 #000;
+            width: 80px;
+            transition: all .3s;
+        }
+        .get {
+            background-color: rgb(224, 114, 114);
+        }
+        .post {
+            background-color: rgb(59, 195, 219);
+        }
+        .put {
+            background-color: rgb(228, 160, 33);
+        }
+        .delete {
+            background-color: rgb(99, 200, 90);
+        }
+        .get:hover {
+            width: 100px;
+            background-color: rgb(250, 0, 0);
+        }
+        .post:hover {
+            width: 100px;
+            background-color: rgb(0, 238, 255);
+        }
+        .put:hover {
+            width: 100px;
+            background-color: orange;
+        }
+        .delete:hover {
+            width: 100px;
+            background-color: rgb(28, 239, 9);
+        }
+    </style>
+    <script src="./dist/axios实例.bundle.js"></script>
+    <!-- <script src="./dist/axios实例.bundle.js"></script> -->
+</head>
+<body>
+    <h1>使用axios发送AJAX请求</h1>
+    <div class="container">
+        <button class="get">GET</button>
+        <button class="post">POST</button>
+        <button class="put">PUT</button>
+        <button class="delete">DELETE</button>
+    </div>
+    <p>
+        标题:<input id="title" type="text">
+    </p>
+    <p>
+        作者:<input id="author" type="text">
+    </p>
+    <p>
+        id:<input type="number" id="number">
+    </p>
+</body>
+</html>
